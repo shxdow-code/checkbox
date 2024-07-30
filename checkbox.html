@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Table</title>
+  <style>
+    /* Global styles */
+    body {
+      font-family: montserrat;
+      margin: 0;
+      padding: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    tr {
+      border: 0px solid rgb(45, 51, 60);
+      text-align: center;
+      padding: 10px;
+      font: montserrat;
+      font-size: 20px;
+    }
+    td {
+      background-color: white;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      font: montserrat;
+    }
+    th {
+      background-color: rgb(45, 51, 60);
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+    td, th {
+      border: 0px solid rgb(45, 51, 60);
+      text-align: center;
+      padding: 10px;
+      font: montserrat;
+      font-size: 20px;
+    }
+    button{
+      background-color: white;
+      color: black;
+      border: 0px solid rgb(45, 51, 60);
+      font-size: 20px;
+      font-weight: bold;
+      font-family: montserrat;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+    .button span{
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    button:hover{
+      background-color: rgb(45, 51, 60);
+      color: white
+    }
+    button:active{
+      background-color: black;
+      color: white;
+      box-shadow: 0.5px rgb(45, 51, 60);
+      transform: translateY(4px);
+    }
+    .checkmark{
+      color: rgb(185, 151, 87);
+    }
+    img{
+      width: 150px;
+      height: 120px;
+    }
+    /* Mobile-specific styles (max-width: 600px) */
+    @media only screen and (max-width: 600px) {
+      table {
+        font-size: 16px;
+        display: block;
+        width: 100%;
+      }
+      th, td {
+        padding: 5px;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: white;
+        color: black;
+        border: 0px solid rgb(45, 51, 60);
+        font-weight: bold;
+        font-family: montserrat;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+      table {
+        display: block;
+        width: 100%;
+      }
+      thead {
+        display: none;
+      }
+      tr {
+        display: block;
+        border-bottom: 1px solid #ccc;
+        font-size: x-small;
+      }
+      th, td {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        text-align: left;
+      }
+      img{
+        width: 75px;
+        height: 60px;
+      }
+    }
+</style>
+</head>
+  
+<!-- Grid -->
+<table>
+
+  <!--USI Pictures with different courses-->
+  <tr>
+    <th>Skills</th>
+    <th><img src="10yearsbluewotag.png"><br></br>Basic</th>
+    <th><img src="10yearsbluewotag.png"><br></br>Primary</th>
+    <th><img src="10yearsbluewotag.png"><br></br>Advanced</th>
+  <tr>
+
+  <td><button id="open-popup-1">Aeronautical Knowledge</button></td>
+
+  <!-- The popup dialog -->
+    <dialog id="popup-1">
+      <h1>Aeronautical Knowledge</h1>
+      <p>This encompasses the fundamental principles of aviation that UAS operators need to understand.</p>
+      <p>It includes</p>
+      <ul>
+        <li>knowledge of weather</li>
+        <li>airspace classification</li>
+        <li>navigation</li>
+        <li>the principles of flight</li>
+      </ul>
+      <p>Operators must also be familiar with the regulations governing UAS operations.</p>
+      <button id="close-popup-1">Close</button>
+    </dialog>
+
+<!-- JavaScript to open and close the popup -->
+  <script>
+    const popup1 = document.getElementById('popup-1');
+    const openButton1 = document.getElementById('open-popup-1');
+    const closeButton1 = document.getElementById('close-popup-1');
+
+    openButton1.addEventListener('click', () => {
+      popup1.showModal();
+    });
+
+    closeButton1.addEventListener('click', () => {
+      popup1.close();
+    });
+  </script>
+    <td class="checkmark">✓</td>
+    <td class="checkmark">✓</td>
+    <td class="checkmark">✓</td>
+    
+  </tr>
+
+  <tr>
+    <th><button id="open-popup-2">Systems Knowledge</button></th>
+
+    <dialog id="popup-2">
+      <h1>Systems Knowledge</h1>
+      <p> This involves understanding the components and systems that comprise a UAS, including</p>
+      <ul>
+        <li>the airframe</li>
+        <li>propulsion</li>
+        <li>control systems</li>
+        <li>communication systems</li>
+        <li>payloads</li>
+      </ul>
+      <p>It also includes knowledge of how these systems interact and function together.</p>
+      <button id="close-popup-2">Close</button>
+    </dialog>
+
+    <script>
+      const popup2 = document.getElementById('popup-2');
+      const openButton2 = document.getElementById('open-popup-2');
+      const closeButton2 = document.getElementById('close-popup-2');
+  
+      openButton2.addEventListener('click', () => {
+        popup2.showModal();
+      });
+  
+      closeButton2.addEventListener('click', () => {
+        popup2.close();
+      });
+    </script>
+
+    <th class="x">X</th>
+    <th class="checkmark">✓</th>
+    <th class="checkmark">✓</th>
+  </tr>
+
+  <tr>
+    <td><button id="open-popup-3">Mission Planning</button></td>
+
+    <dialog id="popup-3">
+      <h1>Mission Planning</h1>
+      <p>The process of planning a UAS operation, including</p>
+      <ul>
+        <li>defining the mission objectives</li>
+        <li>assessing the operational environment</li>
+        <li>selecting appropriate equipment</li>
+        <li>planning the flight path</li>
+        <li>establishing contingency plans</li>
+      </ul>
+      <p>It ensures that the mission can be carried out safely and efficiently.</p>
+      <button id="close-popup-3">Close</button>
+    </dialog>
+
+    <script>
+      const popup3 = document.getElementById('popup-3');
+      const openButton3 = document.getElementById('open-popup-3');
+      const closeButton3 = document.getElementById('close-popup-3');
+  
+      openButton3.addEventListener('click', () => {
+        popup3.showModal();
+      });
+  
+      closeButton3.addEventListener('click', () => {
+        popup3.close();
+      });
+    </script>
+
+    <td class="x">X</td>
+    <td class="checkmark">✓</td>
+    <td class="checkmark">✓</td>
+  </tr>
+
+  <tr>
+    <th><button id="open-popup-4">Maintenance</button></th>
+
+    <dialog id="popup-4">
+      <h1>Maintenance</h1>
+      <p>The procedures and practices involved in keeping a UAS safe and operational.</p>
+      <p>This includes</p> 
+      <ul>
+        <li>routine inspections</li>
+        <li>troubleshooting</li>
+        <li>repairs</li>
+        <li>keeping maintenance records.</li>
+      </ul>
+        <p>Proper maintenance ensures the longevity and reliability of the UAS</p>
+      <button id="close-popup-4">Close</button>
+    </dialog>
+
+    <script>
+      const popup4 = document.getElementById('popup-4');
+      const openButton4 = document.getElementById('open-popup-4');
+      const closeButton4 = document.getElementById('close-popup-4');
+
+      openButton4.addEventListener('click', () => {
+        popup4.showModal();
+      });
+
+      closeButton4.addEventListener('click', () => {
+        popup4.close();
+      });
+    </script>
+
+    <th class="x">X</th>
+    <th class="checkmark">✓</th>
+    <th class="checkmark">✓</th>
+  </tr>
+
+  <tr>
+    <td><button id="open-popup-5">VLOS Flight Training</button></td>
+
+    <dialog id="popup-5">
+    <h1>VLOS Flight Training</h1>
+    <p>Training that focuses on operating a UAS within the visual line of sight of the operator.</p>
+    <p>This includes</p>
+    <ul>
+      <li>understanding how to maintain visual contact with the aircraft</li>
+      <li>run checklists, manage flight maneuvers, maximize the payload</li>
+      <li>handle any immediate issues that arise during the flight.</li>
+    </ul>
+    <button id="close-popup-5">Close</button>
+    </dialog>
+
+    <script>
+      const popup5 = document.getElementById('popup-5');
+      const openButton5 = document.getElementById('open-popup-5');
+      const closeButton5 = document.getElementById('close-popup-5');
+
+      openButton5.addEventListener('click', () => {
+        popup5.showModal();
+      });
+
+      closeButton5.addEventListener('click', () => {
+        popup5.close();
+      });
+    </script>
+
+    <td class="x">X</td>
+    <td class="checkmark">✓</td>
+    <td class="checkmark">✓</td>
+  </tr>
+
+  <tr>
+    <th><button id="open-popup-6">Human Factors</button></th>
+
+    <dialog id="popup-6">
+      <h1>Human Factors</h1>
+      <p>The study of how humans interact with the systems they control.</p>
+      <p>This includes</p> 
+      <ul>
+        <li>understanding operators' physical and cognitive limitations</li>
+        <li>usability of controls and interfaces</li>
+        <li>training operators to manage stress and workload effectively.</li>
+      </ul>
+      <button id="close-popup-6">Close</button>
+    </dialog>
+
+    <script>
+      const popup6 = document.getElementById('popup-6');
+      const openPopup6 = document.getElementById('open-popup-6');
+      const closePopup6 = document.getElementById('close-popup-6');
+
+      openPopup6.addEventListener('click', () => {
+        popup6.showModal();
+      });
+      closePopup6.addEventListener('click', () => {
+        popup6.close();
+      });
+    </script>
+
+    <th class="x">X</th>
+    <th class="x">X</th>
+    <th class="checkmark">✓</th>
+  </tr>
+
+  <tr>
+    <td><button id="open-popup-7">Safety Management</button></td>
+
+    <dialog id="popup-7">
+      <h1>Safety Management</h1>
+      <p>Identifying, assessing, and mitigating risks associated with UAS operations.</p>
+      <p>It involves</p>
+      <ul>
+        <li>creating and implementing safety policies and procedures</li>
+        <li>conducting safety audits</li>
+        <li>promoting a safety culture within the organization.</li>
+      </ul>
+      <button id="close-popup-7">Close</button>
+    </dialog>
+
+    <script>
+      const popup7 = document.getElementById('popup-7');
+      const openPopup7 = document.getElementById('open-popup-7');
+      const closePopup7 = document.getElementById('close-popup-7');
+      
+      openPopup7.addEventListener('click', () => {
+        popup7.showModal();
+      });
+      closePopup7.addEventListener('click', () => {
+        popup7.close();
+      });
+    </script>
+
+    <td class="x">X</td>
+    <td class="x">X</td>
+    <td class="checkmark">✓</td>
+  </tr>
+
+  <tr>
+    <th><button id="open-popup-8">Internal Control Station Operation</button></th>
+
+    <dialog id="popup-8">
+      <h1>Internal Control Station Operation</h1>
+      <p>The procedures and skills required to operate the control station from which the UAS is piloted.</p>
+      <p>This includes</p>
+      <ul>
+        <li>understanding the layout and functions of the control station software</li>
+        <li>interpreting the control interfaces</li>
+        <li>managing internal external communications.</li>
+      </ul>
+      <button id="close-popup-8">Close</button>
+    </dialog>
+
+    <script>
+      const popup8 = document.getElementById('popup-8');
+      const openPopup8 = document.getElementById('open-popup-8');
+      const closePopup8 = document.getElementById('close-popup-8');
+
+      openPopup8.addEventListener('click', () => {
+        popup8.showModal();
+      });
+      closePopup8.addEventListener('click', () => {
+        popup8.close();
+      });
+    </script>
+
+    <th class="x">X</th>
+    <th class="x">X</th>
+    <th class="checkmark">✓</th>
+  </tr>
+
+  <tr>
+    <td><button id="open-popup-9">BVLOS (Beyond Visual Line of Sight) Flight Training</button></td>
+
+    <dialog id="popup-9">
+      <h1>BVLOS Flight Training</h1>
+      <p>Training that prepares operators to control a UAS when it is beyond their direct visual line of sight.</p>
+      <p>This includes:</p>
+      <ul>
+        <li>Using advanced navigation and detection and avoidance technologies</li>
+        <li>managing long-distance communication links</li>
+        <li>Understanding the regulatory requirements for BVLOS operations</li>
+      </ul>
+      <button id="close-popup-9">Close</button>
+    </dialog>
+
+    <script>
+      const popup9 = document.getElementById('popup-9');
+      const openPopup9 = document.getElementById('open-popup-9');
+      const closePopup9 = document.getElementById('close-popup-9');
+
+      openPopup9.addEventListener('click', () => {
+        popup9.showModal();
+      });
+      closePopup9.addEventListener('click', () => {
+        popup9.close();
+      });
+    </script>
+
+    <td class="x">X</td>
+    <td class="x">X</td>
+    <td class="checkmark">✓</td>
+  </tr>
+
+</table>
+</html>
